@@ -16,7 +16,9 @@
   "scripts": {
     "start": "node ./bin/http-server",
     "pretest": "stylezero bin/ lib/ test",
-    "test": "vows --spec --isolate"
+    "test": "vows --spec --isolate",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "contributors": [
     {
@@ -71,7 +73,8 @@
     "optimist": "0.6.x",
     "portfinder": "0.2.x",
     "union": "~0.4.3",
-    "ws": "^0.6.3"
+    "ws": "^0.6.3",
+    "snyk": "^1.85.0"
   },
   "devDependencies": {
     "vows": "0.7.x",
@@ -93,5 +96,6 @@
     "watch-http-server": "./bin/http-server",
     "watchhttpserver": "./bin/http-server",
     "whs": "./bin/http-server"
-  }
+  },
+  "snyk": true
 }
